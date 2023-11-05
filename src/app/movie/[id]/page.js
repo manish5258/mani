@@ -5,7 +5,7 @@ import Image from "next/image";
 const Page = async ({params}) => {
     const id = params.id;
 
-    const url = `https://netflix54.p.rapidapi.com/title/details/?ids=${id}&lang=en`;
+    const url = process.env.RAPID_KEY;
 
     const options = {
         method: 'GET',
